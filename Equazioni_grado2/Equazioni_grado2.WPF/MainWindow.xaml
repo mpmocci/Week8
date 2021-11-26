@@ -1,0 +1,166 @@
+﻿<Window x:Class="Equazioni_grado2.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Equazioni_grado2.WPF"
+        mc:Ignorable="d"
+        Title="Equazioni 2°" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF00FFDC" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="53*"></ColumnDefinition>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="160*"></ColumnDefinition>
+            <ColumnDefinition Width="114*"></ColumnDefinition>
+            <ColumnDefinition Width="46*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtA" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="55" Margin="24,54,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" FontSize="36" >
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.539"/>
+                    <GradientStop Color="#FFFCFCFC" Offset="0.481"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FF5DF218" Opacity="0"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="txtX2" HorizontalAlignment="Left" Height="55" Margin="101,54,0,0" Grid.RowSpan="2" Text="x \x2082  +" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" FontSize="36" Grid.ColumnSpan="2" FontStyle="Italic" Foreground="#FFFFFEFE" IsReadOnly="True" SelectionBrush="#FF7E91A0" SelectionTextBrush="#FFA06666">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FF080706" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtB"  PreviewTextInput="NumberValidationTextBox"  HorizontalAlignment="Center" Height="55" Margin="0,54,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" FontSize="36" Grid.Column="1">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.549"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtX" HorizontalAlignment="Left" Height="55" Margin="126,54,0,0" Grid.RowSpan="2" Text="x +" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" FontSize="36" FontStyle="Italic" Foreground="#FFFFFEFE" IsReadOnly="True" Grid.Column="1" Grid.ColumnSpan="3">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FFF9D912" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtC"  PreviewTextInput="NumberValidationTextBox"  HorizontalAlignment="Left" Height="55" Margin="33,54,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" FontSize="36" Grid.Column="2" Grid.ColumnSpan="2">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="0.529"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtEqualZero" HorizontalAlignment="Left" Height="55" Margin="57,54,0,0" Grid.RowSpan="2" Text="=0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" FontSize="36" FontStyle="Italic" Foreground="#FFFFFEFE" IsReadOnly="True" Grid.Column="3" Grid.ColumnSpan="2">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="#FFF9D912" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="btnCalcola" Content="Calcola" HorizontalAlignment="Left" Height="72" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" FontSize="20" FontWeight="Bold" Click="btnCalcola_Click" Grid.IsSharedSizeScope="True">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF17FF80" Offset="0.566"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtRisultato" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="73" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="714" FontSize="36" Margin="40,0,0,0">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF00F9FF" Offset="0.234"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label Content="Risultato" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="0,41,0,0" Grid.Row="3" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.016,-1.037" FontSize="18" FontFamily="Bahnschrift Light" FontWeight="Bold"/>
+        <Button x:Name="btnAzzera" Content="Azzera" HorizontalAlignment="Left" Height="72" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="150" FontSize="20" FontWeight="Bold" Grid.Column="2" Click="btnAzzera_Click" Grid.ColumnSpan="2" ClipToBounds="True" SnapsToDevicePixels="True">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF17FF80" Offset="0.573"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Menu x:Name="Menu" Grid.ColumnSpan="7" Margin="0,0,0,50" Background="#FFD3F3FF">
+            <Menu.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF10D7DC" Offset="0.586"/>
+                    <GradientStop Color="#FF00F9FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.BorderBrush>
+            <MenuItem x:Name="File" Header="File" FontSize="16">
+                <MenuItem x:Name="Exit" Header="Exit" Click="Exit_Click" ToolTip="Clicca per uscire"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="txtSquare" HorizontalAlignment="Left" Height="28" Margin="94,9,0,0" Text="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="23" FontSize="14" Foreground="White" Grid.Column="4" Grid.Row="1" >
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="#FFABADB3" Opacity="0"/>
+            </TextBox.BorderBrush>
+            <TextBox.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </TextBox.Background>
+        </TextBox>
+    </Grid>
+</Window>

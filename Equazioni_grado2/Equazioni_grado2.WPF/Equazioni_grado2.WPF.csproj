@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="maths_formula_symbol_graph_sum_2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Equazioni_grado2.Core\Equazioni_grado2.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="maths_formula_symbol_graph_sum_2.jpg" />
+  </ItemGroup>
+
+</Project>
